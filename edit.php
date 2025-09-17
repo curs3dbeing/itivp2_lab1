@@ -26,7 +26,7 @@ try {
     die("Ошибка: " . $e->getMessage());
 }
 
-// Обработка отправки формы
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $for_whom = $_POST['for_whom'] ?? '';
     $budget = $_POST['budget'] ?? 0;
@@ -222,7 +222,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <button type="submit"> Сохранить изменения</button>
     </form>
 
-    <!-- Форма для удаления -->
+
     <form method="POST" action="delete.php" onsubmit="return confirm('Вы уверены, что хотите удалить этот подарок?')">
         <input type="hidden" name="id" value="<?= $gift['id'] ?>">
         <button type="submit" class="delete-btn"> Удалить подарок</button>

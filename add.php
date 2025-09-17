@@ -1,14 +1,14 @@
 <?php
 require_once 'config.php';
 
-// Обработка отправки формы
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $for_whom = $_POST['for_whom'] ?? '';
     $budget = $_POST['budget'] ?? 0;
     $status = $_POST['status'] ?? 'не отправлен';
 
     try {
-        // Валидация данных
+
         if (empty($for_whom)) {
             throw new Exception("Поле 'Для кого' обязательно для заполнения");
         }
@@ -30,7 +30,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         $success = "Подарок успешно добавлен!";
 
-        // Очищаем поля формы после успешного добавления
         $_POST = [];
 
     } catch (Exception $e) {

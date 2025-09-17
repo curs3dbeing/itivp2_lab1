@@ -5,7 +5,7 @@ if (!isset($pdo)) {
     die("Ошибка: Не удалось подключиться к базе данных");
 }
 
-// Обработка сообщений
+
 $message = '';
 $message_type = '';
 
@@ -413,7 +413,7 @@ try {
 </div>
 
 <script>
-    // Автоматическое скрытие сообщений через 5 секунд
+
     setTimeout(() => {
         const alerts = document.querySelectorAll('.alert');
         alerts.forEach(alert => {
